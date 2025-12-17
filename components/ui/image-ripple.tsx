@@ -37,16 +37,14 @@ export default function Scene() {
 }
 
 function Model() {
-  const { viewport } = useThree()
+  useThree()
   const texture = useTexture("/brush.png")
   const meshRefs = useRef<(THREE.Mesh | null)[]>([])
   const mouse = useMouse()
   const device = useDimension()
   const [prevMouse, setPrevMouse] = useState({ x: 0, y: 0 })
   const [currentWave, setCurrentWave] = useState(0)
-  const { camera } = useThree()
 
-  const scene = new THREE.Scene()
   const max = 100
 
   const uniforms = useRef({
@@ -60,26 +58,8 @@ function Model() {
   const fboBase = useFBO(device.width, device.height)
   const fboTexture = useFBO(device.width, device.height)
 
-  const { scene: imageScene, camera: imageCamera } = Images(
-    new THREE.Vector2(viewport.width, viewport.height)
-  )
-
   useEffect(() => {
-    const generatedMeshes = Array.from({ length: max }).map((_, i) => (
-      <mesh
-        key={i}
-        position={[0, 0, 0]}
-        ref={(el: THREE.Mesh | null) => {
-          meshRefs.current[i] = el
-        }}
-        rotation={[0, 0, Math.random()]}
-        visible={false}
-      >
-        <planeGeometry args={[60, 60, 1, 1]} />
-        <meshBasicMaterial transparent={true} map={texture} />
-      </mesh>
-    ))
-    setMeshes(generatedMeshes)
+    // Meshes are managed via meshRefs, initialization happens on render
   }, [texture])
 
   function setNewWave(x: number, y: number, currentWave: number) {
@@ -102,7 +82,7 @@ function Model() {
     setPrevMouse({ x: x, y: y })
   }
 
-  useFrame(({ scene: finalScene, camera: frameCamera }) => {
+  useFrame(({ camera: frameCamera }) => {
     const x = mouse.x - device.width / 1.65
     const y = -mouse.y + device.height / 1.5
     trackMousePos(x, y)
@@ -133,6 +113,8 @@ function Model() {
     }
   }, 1)
 
+  // Uncomment to enable image ripple effects
+  /* 
   function Images(viewport: THREE.Vector2) {
     const scene = new THREE.Scene()
     const camera = new THREE.OrthographicCamera(
@@ -181,10 +163,24 @@ function Model() {
     scene.add(group)
     return { scene, camera }
   }
+  */
 
   return (
     <group>
-      {meshes}
+      {Array.from({ length: max }).map((_, i) => (
+        <mesh
+          key={i}
+          position={[0, 0, 0]}
+          ref={(el: THREE.Mesh | null) => {
+            meshRefs.current[i] = el
+          }}
+          rotation={[0, 0, Math.random()]}
+          visible={false}
+        >
+          <planeGeometry args={[60, 60, 1, 1]} />
+          <meshBasicMaterial transparent={true} map={texture} />
+        </mesh>
+      ))}
       {/* <Images /> */}
       <mesh>
         <planeGeometry args={[device.width, device.height, 1, 1]} />
