@@ -1,5 +1,9 @@
 [build]
   command = "npm run build"
+  functions = "netlify/functions"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
+
+[cache]
+  paths = [".next/cache/**", "node_modules/**"]
