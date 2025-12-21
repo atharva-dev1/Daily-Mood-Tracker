@@ -9,7 +9,15 @@ Designed with clean architecture, performance optimization, and secure deploymen
 🔗 https://daily-mood-trackerr.vercel.app/
 
 ---
+## 📸 Screenshots (Output):
+<img width="1851" height="517" alt="image" src="https://github.com/user-attachments/assets/6bd0c251-b38d-4e16-9934-341cbe0c7ef7" />
 
+<img width="1780" height="602" alt="image" src="https://github.com/user-attachments/assets/17382bbf-4fa0-4552-8338-9feb2dc9df6b" />
+
+<img width="1824" height="666" alt="image" src="https://github.com/user-attachments/assets/6f024ff5-1861-4ff1-8743-57f15a399453" />
+
+
+---
 ## 🛠️ Tech Stack
 
 - **Framework:** Next.js 15 (App Router)
@@ -159,4 +167,3 @@ Aspiring Full-Stack Developer
 
 Built with ❤️ using Next.js
 
-```
