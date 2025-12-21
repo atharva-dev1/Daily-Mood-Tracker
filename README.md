@@ -160,6 +160,3 @@ Aspiring Full-Stack Developer
 Built with ❤️ using Next.js
 
 ```
-
-Just tell me — I’ll rewrite it instantly 🚀
-```
