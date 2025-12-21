@@ -1,36 +1,165 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Daily Mood Tracker 🧠✨
 
-## Getting Started
+A modern, production-ready **Daily Mood Tracker** application built with **Next.js (App Router)**.  
+Designed with clean architecture, performance optimization, and secure deployment best practices in mind.
 
-First, run the development server:
+---
+
+## 🚀 Live Demo
+🔗 https://daily-mood-trackerr.vercel.app/
+
+---
+
+## 🛠️ Tech Stack
+
+- **Framework:** Next.js 15 (App Router)
+- **Frontend:** React 19
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **3D & Visuals:** Three.js, React Three Fiber, Drei
+- **Linting:** ESLint
+- **Deployment:** Vercel
+- **Runtime:** Node.js 20.x
+
+---
+
+## ✨ Features
+
+- Daily mood logging interface
+- Clean, responsive, and accessible UI
+- Optimized static generation
+- Component-based scalable structure
+- Environment-aware configuration
+- CVE-safe Next.js version
+- Production-ready Vercel deployment
+
+---
+
+## 📁 Project Structure
+
+```
+
+Daily-Mood-Tracker/
+├── app/                # Next.js App Router pages & layouts
+├── components/         # Reusable UI components
+├── public/             # Static assets
+├── styles/             # Global styles
+├── package.json
+├── vercel.json
+└── README.md
+
+````
+
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env.local` file in the project root:
+
+```env
+NEXT_PUBLIC_ENVIRONMENT=production
+````
+
+> Variables prefixed with `NEXT_PUBLIC_` are exposed to the client.
+
+---
+
+## 🧑‍💻 Local Development
+
+### Clone the repository
+
+```bash
+git clone https://github.com/atharva-dev1/Daily-Mood-Tracker.git
+cd Daily-Mood-Tracker
+```
+
+### Install dependencies
+
+```bash
+npm install
+```
+
+### Start development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Application runs on:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🏗️ Production Build
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🚀 Deployment
 
-## Deploy on Vercel
+This project is optimized for **Vercel**:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+* Automatic Next.js detection
+* Node version managed via `package.json`
+* Minimal `vercel.json` configuration
+* Security-enforced Next.js updates
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Push to `main` branch → Vercel deploys automatically.
+
+---
+
+## 🔐 Security & Best Practices
+
+* Uses patched and secure Next.js versions
+* Avoids deprecated Vercel configuration
+* Clean dependency management
+* Strict TypeScript & ESLint rules
+
+---
+
+## 📌 Roadmap
+
+* Mood history & analytics
+* User authentication
+* Database integration
+* Dark mode support
+* Notifications & reminders
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Open a Pull Request
+
+---
+
+## 📄 License
+
+Licensed under the **MIT License**.
+
+---
+
+## 👤 Author
+
+**Atharva Sharma**
+Aspiring Full-Stack Developer
+
+Built with ❤️ using Next.js
+
+```
+
+Just tell me — I’ll rewrite it instantly 🚀
+```
